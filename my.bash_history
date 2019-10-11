@@ -1976,11 +1976,6 @@ vi ~/.bashrc
 wc -l ~/.bash_history 
 wc -l ~/.bash_history
 wc -l ~/.bash_history
-vpnc-connect vpn.meduniwien.ac.at
-vpnc vpn.meduniwien.ac.at
-man vpnc
-sudo vpnc
-sudo openconnect vpn.meduniwien.ac.at
 top
 ls -ltr | tail
 ls -ltrh | tail
@@ -2826,7 +2821,6 @@ exit
 exit
 top
 ping google.com
-sudo openconnect vpn.meduniwien.ac.at
 cd kaggle/chemistry/
 vi train.py 
 mv model-1JHN.txt model-1JHN-last.txt
