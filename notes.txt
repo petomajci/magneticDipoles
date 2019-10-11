@@ -1,0 +1,97 @@
+1st submission  (~ 6 hours of training)
+==============
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+0.0211371 -0.3415291 -1.0543919 -1.1973499 -1.2290130 -1.1658298 -1.2794593 -1.9344055
+CV:   -1.022605
+leaderboard: -1.313
+
+3rd submission (randomly shuffled structures for CV training, 10K learning steps (~ 10 hours of training))
+==============
+   ~ 1h 6min    10min       2h         21min      15min     5h28m        27m       54min
+      1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.1421990 -0.6137518 -1.2400638 -1.3557743 -1.7883484 -1.3749290 -1.3877680 -2.2092280
+CV:   -1.264008
+leaderboard: -1.388
+
+4 and 4b submission (TODO="2JHC 2JHH 2JHN 3JHC 3JHH 3JHN"   ... were run with learning rate 0.04)
+		     by mistake,  20K steps
+===================
+      1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.3286291 -0.8344919 -1.4837130  -1.582334 -2.0632220  -1.689521  -1.570746  -2.509447
+CV:    -1.507763
+leaderboard: -1.509
+
+
+4c ... same as 4b.... but 1JNH included Muliken charges
+===================
+leaderboard: -1.542
+
+4d ... same as 4c BUT for 1JNH
+=================== 
+added G1, G2 descriptors, 0.01 learning rate, 30K steps, small trees
+      1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.3286291  -1.411126 -1.4837130  -1.582334 -2.0632220  -1.689521  -1.570746  -2.509447
+CV:	-1.579842
+leaderboard: -1.581
+
+4e ... same as 4d BUT for 1JNH (100K learning steps at 0.05 learning rate)
+      1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.3286291  -1.441950 -1.4837130  -1.582334 -2.0632220  -1.689521  -1.570746  -2.509447
+CV: -1.583695
+leaderboard: -1.585
+
+4f
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.3286291 -1.555329 -1.4837130  -1.582334 -2.0632220  -1.689521  -1.570746  -2.509447
+CV: -1.597868
+leaderboard: -1.598
+
+5a ... now 1JHC is being optimized
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.9713460 -1.555329 -1.4837130  -1.582334 -2.0632220  -1.689521  -1.570746  -2.509447
+CV: -1.678207
+leaderboard: -1.678
+
+7a ... 2JHN and 2JHC are being run with the new features: all7A_2JHx_filter1.data
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.971346 -1.5553289 -1.8948919  -1.582334 -2.3357307  -1.689521  -1.570746  -2.509447
+CV: -1.763668
+leaderboard: -1.763
+
+7b ... 2JHN is trained for 90K steps and 1JHN for 59K steps (early stopped) (increasing learning rate), 
+       2JHH is also executed
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.9713460 -1.5624303 -1.8948919  -2.34464  -2.3778108  -1.689521  -1.570746  -2.509447
+CV: -1.865104
+leaderboard: -1.864
+
+7c... 3JHN trained for 30K steps
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.9713460 -1.5624303 -1.8948919  -2.34464  -2.3778108  -1.689521  -1.570746  -2.6018595
+CV: -1.876656
+leaderboard: -1.875
+
+7d... 3JHH trained for 30K steps
+     1JHC       1JHN       2JHC       2JHH       2JHN       3JHC       3JHH       3JHN
+-0.9713460 -1.5624303 -1.8948919  -2.34464  -2.3778108  -1.689521  -1.570746  -2.6018595
+CV: -1.876656
+leaderboard: -1.929
+
+
+improvements against the 4b submission (optimized hyperparameters) submission (PLB: -1.509):
+1JHN -0.72
+1JHC -0.64
+2JHN -0.31
+2JHC -0.41
+2JHH -0.76
+3JHN -0.09
+3JHH -0.43
+3JHC  ? (-0.187)
+
+TO DO
+- benchmark feature engineering
+- early stoping...
+- look on ML algo's
+
+DONE
+- have to improve CV (shuffle)
